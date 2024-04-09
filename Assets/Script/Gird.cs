@@ -53,7 +53,9 @@ public class Gird
     //获取格子的值
     public int getValue(int x,int y)
     {
-        return gird[x, y];
+        if (x >= 0 && y >= 0 && x < width && y < height)
+            return gird[x, y];
+        return -1;
     }
     public int getValue(Vector3 worldPosition)
     {

@@ -22,7 +22,7 @@ public class GirdTest : MonoBehaviour
             {
                 gird.setValue(mouseposit, 0);
             }
-            else
+            else if(gird.getValue(mouseposit)!= -1)
             {
                 gird.setValue(mouseposit, 1);
             }   
