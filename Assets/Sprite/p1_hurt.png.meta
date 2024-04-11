@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 5846af1e9034ce44bb18a4fa9589a7f1
+guid: 450ee83b336d1db4d91f353a98c49dfd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 855067733875592807
-    second: Guide_0
+      213: 3863782893982033934
+    second: p1_hurt_0
+  - first:
+      213: -6017222395689764304
+    second: p1_hurt_1
+  - first:
+      213: 24559878093897182
+    second: p1_hurt_2
+  - first:
+      213: 6316352135736235998
+    second: p1_hurt_3
+  - first:
+      213: -5029652422657878930
+    second: p1_hurt_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,22 +112,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guide_0
+      name: p1_hurt_
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 720
+        x: 18
+        y: 2
+        width: 31
+        height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 76e8d88d29fcddb00800000000000000
-      internalID: 855067733875592807
+      spriteID: 03b79ee09e73ad24695c8d457e0e627d
+      internalID: -155793968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_hurt_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a68a90ede04e1942aa11d6039cc2704
+      internalID: 1085784501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_hurt_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e30e736b086d84fb365fe78c176aa0
+      internalID: 1451228250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_hurt_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9b9b70c0bd7454f86c21b76049a424
+      internalID: 25856648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_hurt_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee3177488de9f744b77ead74629192f
+      internalID: 347350511
       vertices: []
       indices: 
       edges: []
@@ -123,7 +219,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2c9d45773c6f754479641ae2a9435f43
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +227,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Guide_0: 855067733875592807
+      p1_hurt_: -155793968
+      p1_hurt_1: 1085784501
+      p1_hurt_2: 1451228250
+      p1_hurt_3: 25856648
+      p1_hurt_4: 347350511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
