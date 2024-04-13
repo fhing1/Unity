@@ -924,6 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playSpeed: 5
+  JumpSpeed: 5
 --- !u!95 &2120604719
 Animator:
   serializedVersion: 7
