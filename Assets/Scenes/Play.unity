@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358665850}
   - component: {fileID: 358665849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 801181321}
   - component: {fileID: 801181320}
   - component: {fileID: 801181319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playSpeed: 5
-  JumpSpeed: 5
+  JumpSpeed: 6
 --- !u!95 &2120604719
 Animator:
   serializedVersion: 7
