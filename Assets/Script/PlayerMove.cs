@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    [SerializeField] float JumpSpeed;//创建序列化字段，使该变量可以直接在Unity上编辑
+    [SerializeField] float playSpeed;
+    [SerializeField] float DoubleJumpSpeed;
     private Rigidbody2D rb;
-    [SerializeField] float playSpeed;//创建序列化字段，使该变量可以直接在Unity上编辑
     private float horizontal;
     private bool FaceRight = true;
     private Animator myAnim;
-    [SerializeField] float JumpSpeed;
     private BoxCollider2D myFeet;
     private bool isGround;
+    private bool canDoubleJump;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();//导入2D角色碰撞刚体
@@ -65,6 +67,16 @@ public class PlayerMove : MonoBehaviour
                 myAnim.SetBool("IsJump", true);
                 Vector2 jumpV1 = new Vector2(0.0f, JumpSpeed);//创建跳跃速度初始化为0
                 rb.velocity = Vector2.up * jumpV1;//把刚体速度设置成跳跃速度向量
+                canDoubleJump = true;
+            }
+            else
+            {
+                if (canDoubleJump)
+                {
+                    Vector2 doubleJumpVel = new Vector2(0.0f, DoubleJumpSpeed);
+                    rb.velocity = Vector2.up * doubleJumpVel;
+                    canDoubleJump = false;
+                }
             }
         }
     }
@@ -73,9 +85,17 @@ public class PlayerMove : MonoBehaviour
         myAnim.SetBool("Idle", false);
         if (myAnim.GetBool("IsJump"))
         {
-            if(rb.velocity.y < 0.0f)
+            if(rb.velocity.y < 0.0f)//判断角色刚体y轴速度是否小于0
             {
                 myAnim.SetBool("IsJump", false);
+                myAnim.SetBool("IsFall", true);
+            }
+        }
+        else
+        {
+            if (isGround)
+            {
+                myAnim.SetBool("IsFall", false);
                 myAnim.SetBool("Idle", true);
             }
         }
