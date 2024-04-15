@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] float JumpSpeed;//创建序列化字段，使该变量可以直接在Unity上编辑
     [SerializeField] float playSpeed;
@@ -30,18 +30,19 @@ public class PlayerMove : MonoBehaviour
         //所以固定频率对于跳跃的检测不太友好。
         CheckGround();
         SwithAction();
+        //Attack();
     }
     private void FixedUpdate()
     {
-        Move();
-        Run();
+        Overturn();
+        Walk();
     }
     void CheckGround()
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
         Debug.Log(isGround);
     }
-    private void Move()
+    private void Overturn()
     {
         //左右移动
         rb.velocity = new Vector2(horizontal * playSpeed, rb.velocity.y);
@@ -53,7 +54,7 @@ public class PlayerMove : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
     }
-    private void Run()
+    private void Walk()
     {
 
         bool playerHasXAxisSpeed = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;//检测角色X轴的速度是否大于0小于1
@@ -100,4 +101,10 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
+    //private void Attack()
+    //{
+    //    if (Input.GetButtonDown("Attack")) {
+    //        myAnim.SetTrigger("IsAttack");
+    //    }
+    //}
 }
