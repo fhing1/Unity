@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     void CheckGround()
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        Debug.Log(isGround);
+       
     }
     private void Overturn()
     {
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
     {
 
         bool playerHasXAxisSpeed = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;//检测角色X轴的速度是否大于0小于1
-        myAnim.SetBool("IsRun", playerHasXAxisSpeed);//通过前面的判定对IsRun赋值
+        myAnim.SetBool("IsWalk", playerHasXAxisSpeed);//通过前面的判定对IsRun赋值
     }
     private void Jump()
     {
@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
             {
                 if (canDoubleJump)
                 {
+                    myAnim.SetBool("DoubleJump", true);
                     Vector2 doubleJumpVel = new Vector2(0.0f, DoubleJumpSpeed);
                     rb.velocity = Vector2.up * doubleJumpVel;
                     canDoubleJump = false;
@@ -92,14 +93,26 @@ public class Player : MonoBehaviour
                 myAnim.SetBool("IsFall", true);
             }
         }
-        else
-        {
-            if (isGround)
+        else if (isGround)
             {
                 myAnim.SetBool("IsFall", false);
                 myAnim.SetBool("Idle", true);
             }
+
+        if (myAnim.GetBool("DoubleJump"))
+        {
+            if (rb.velocity.y < 0.0f)//判断角色刚体y轴速度是否小于0
+            {
+                myAnim.SetBool("DoubleJump", false);
+                myAnim.SetBool("DoubleFall", true);
+            }
         }
+        else if (isGround)
+        {
+            myAnim.SetBool("DoubleFall", false);
+            myAnim.SetBool("Idle", true);
+        }
+
     }
     //private void Attack()
     //{
