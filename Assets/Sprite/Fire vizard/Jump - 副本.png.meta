@@ -322,7 +322,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Jump - \u526F\u672C_0": -1767667564359641901
+      "Jump - \u526F\u672C_1": 6572818385749009190
+      "Jump - \u526F\u672C_2": -2296080078388341319
+      "Jump - \u526F\u672C_3": -3450693285211119943
+      "Jump - \u526F\u672C_4": -3264521189833204968
+      "Jump - \u526F\u672C_5": -1178471710382871399
+      "Jump - \u526F\u672C_6": 7899492157915859143
+      "Jump - \u526F\u672C_7": 4899008866167871414
+      "Jump - \u526F\u672C_8": -1624195296300327244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
